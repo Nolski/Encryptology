@@ -1,0 +1,23 @@
+{
+  "name": "Encryptology",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-mathjax": "^0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nolski/Encryptology.git"
+  },
+  "author": "Mike Nolan <me@nolski.rocks>",
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/Nolski/Encryptology/issues"
+  },
+  "homepage": "https://github.com/Nolski/Encryptology"
+}
