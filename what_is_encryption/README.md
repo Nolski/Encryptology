@@ -5,7 +5,8 @@ Encryption is the process of encoding messages or information in such a way that
 Under some circumstances, encryption can be fairly automatic and simple. But there are ways encryption can go wrong, and the more you understand it, the safer you will be against such situations [[1]](https://ssd.eff.org/en/module/what-encryption).
 
 ## Why does it matter?
-TODO
+
+As more and more of our communication happens through digital medium we expose the information that we are communicating to  a wide world of people. If a conversation is recorded and used against you, it can be taken out of context. Information that you want to keep between you and someone else, perhaps for security reasons is now more vulnerable than ever. Encryption is a tool which we can use to help safeguard our data and communication.
 
 ## Where should I use encryption?
 
