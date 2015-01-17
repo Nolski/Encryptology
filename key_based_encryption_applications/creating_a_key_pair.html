@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>Creating a key pair | Encryptology</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.5.0">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+        
+    
+    
+    <link rel="next" href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html" />
+    
+    
+    <link rel="prev" href="../key_based_encryption_applications/gpg.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book" data-level="2.1.1" data-basepath=".." data-revision="1421515954767">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="what_is_encryption/README.html">
+            
+                
+                    <a href="../what_is_encryption/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         What is encryption?
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="key_based_encryption_applications/README.html">
+            
+                
+                    <a href="../key_based_encryption_applications/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Key based encryption applications
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="key_based_encryption_applications/gpg.html">
+            
+                
+                    <a href="../key_based_encryption_applications/gpg.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         GPG
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter active" data-level="2.1.1" data-path="key_based_encryption_applications/creating_a_key_pair.html">
+            
+                
+                    <a href="../key_based_encryption_applications/creating_a_key_pair.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                         Creating a key pair
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="setting_up_ssl_and_tls_encryption_for_your_webserver/README.html">
+            
+                
+                    <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Setting up SSL and TLS encryption for your webserver
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="3.1" data-path="setting_up_ssl_and_tls_encryption_for_your_webserver/nginx.html">
+            
+                
+                    <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/nginx.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                         Nginx
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="encrypted_instant_messaging/README.html">
+            
+                
+                    <a href="../encrypted_instant_messaging/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Encrypted Instant Messaging
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.1" data-path="encrypted_instant_messaging/otr">
+            
+                
+                    <a href="../encrypted_instant_messaging/otr">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                         OTR
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Open Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Encryptology</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_4">
+                    
+                        <h1 id="creating-a-key-pair">Creating a key pair</h1>
+<h3 id="creating-a-key-pair">Creating a key pair</h3>
+<p>So the first thing that you&#39;ll need to do before you begin encrypting and decrypting anything is create your key pair. This consists of your publickey and privatekey.</p>
+<h5 id="getting-to-a-terminal">Getting to a terminal</h5>
+<p><code>{ insert instructions on getting to a terminal here }</code></p>
+<p>The first think that you&#39;ll need to do is open a terminal and run</p>
+<p><code>gpg --gen-key</code></p>
+<h5 id="choosing-a-key-type">Choosing a key type</h5>
+<p>This will prompt you with a question asking what kind of key you want.</p>
+<pre><code class="lang-bash">Please select what kind of key you want:
+   (<span class="hljs-number">1</span>) RSA and RSA (default)
+   (<span class="hljs-number">2</span>) DSA and Elgamal
+   (<span class="hljs-number">3</span>) DSA (sign only)
+   (<span class="hljs-number">4</span>) RSA (sign only)
+</code></pre>
+<p><code>{ insert discussion of RSA and DSA here }</code> but for now let&#39;s choose RSA and RSA. So type <code>1</code> and hit return.</p>
+<h5 id="choosing-a-key-size">Choosing a key size</h5>
+<p>Choosing a key size can often times be a confusing task. The larger the key size the more secure your key but depending on what device you are using, the action of encrypting and decrypting using a larger key may cause performance impacts that you do not want to deal with. With most modern laptops and desktops this shouldn&#39;t be a problem so <code>4096</code> or <code>8192</code> (if offered) should be fine to use.</p>
+<p>So when prompted with the message</p>
+<pre><code class="lang-bash">RSA keys may be between <span class="hljs-number">1024</span> and <span class="hljs-number">8192</span> bits long.
+What keysize <span class="hljs-keyword">do</span> you want? (<span class="hljs-number">2048</span>)
+</code></pre>
+<p>Feel free to reply with any size that you feel fits your need.</p>
+<p>For more information there is this <a href="http://danielpocock.com/rsa-key-sizes-2048-or-4096-bits" target="_blank">fantastic explanation</a> of the pros and cons between 2048 and 4096 length keys.</p>
+<h5 id="when-should-your-key-expire">When should your key expire?</h5>
+<p>This is largely dependent on how you plan to use a key. The important thing to note is that since your key <a href="http://madduck.net/blog/2006.06.20:expiring-gpg/" target="_blank">can be renewed</a> it doesn&#39;t really provide much (if any) security benefit.</p>
+<p>So when prompted with</p>
+<pre><code class="lang-bash">lease specify how long the key should be valid.
+         <span class="hljs-number">0</span> = key does not expire
+      &lt;n&gt;  = key expires <span class="hljs-keyword">in</span> n days
+      &lt;n&gt;w = key expires <span class="hljs-keyword">in</span> n weeks
+      &lt;n&gt;m = key expires <span class="hljs-keyword">in</span> n months
+      &lt;n&gt;y = key expires <span class="hljs-keyword">in</span> n years
+</code></pre>
+<p>Feel free to enter <code>0</code> if you want your key to last forever. We will go over revoking your privatekey if you have become compromsed later.</p>
+<h5 id="basic-info">Basic Info</h5>
+<p>This is pretty self explanatory. Name, email and comment describing the key. I like to include my online handle (Nolski) and some words describing the machine I&#39;m using it on (ex. <em>Nolski - Laptop Personal</em>)</p>
+<h5 id="choosing-a-password">Choosing a password</h5>
+<p>This is important</p>
+<h2 id="references">References</h2>
+<p><a href="http://security.stackexchange.com/questions/5096/rsa-vs-dsa-for-ssh-authentication-keys#answer-5100" target="_blank">http://security.stackexchange.com/questions/5096/rsa-vs-dsa-for-ssh-authentication-keys#answer-5100</a></p>
+<p><a href="http://danielpocock.com/rsa-key-sizes-2048-or-4096-bits" target="_blank">http://danielpocock.com/rsa-key-sizes-2048-or-4096-bits</a></p>
+<p><a href="http://madduck.net/blog/2006.06.20:expiring-gpg/" target="_blank">http://madduck.net/blog/2006.06.20:expiring-gpg/</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../key_based_encryption_applications/gpg.html" class="navigation navigation-prev " aria-label="Previous page: GPG"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html" class="navigation navigation-next " aria-label="Next page: Setting up SSL and TLS encryption for your webserver"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
