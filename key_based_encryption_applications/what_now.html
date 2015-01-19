@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Setting up SSL and TLS encryption for your webserver | Encryptology</title>
+        <title>What now? | Encryptology</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../setting_up_ssl_and_tls_encryption_for_your_webserver/nginx.html" />
+    <link rel="next" href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html" />
     
     
-    <link rel="prev" href="../key_based_encryption_applications/what_now.html" />
+    <link rel="prev" href="../key_based_encryption_applications/creating_a_key_pair.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="3" data-basepath=".." data-revision="1421641053477">
+    <div class="book" data-level="2.1.2" data-basepath=".." data-revision="1421641053477">
     
 
 <div class="book-summary">
@@ -132,7 +132,7 @@
         </li>
     
         
-        <li class="chapter " data-level="2.1.2" data-path="key_based_encryption_applications/what_now.html">
+        <li class="chapter active" data-level="2.1.2" data-path="key_based_encryption_applications/what_now.html">
             
                 
                     <a href="../key_based_encryption_applications/what_now.html">
@@ -158,7 +158,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="3" data-path="setting_up_ssl_and_tls_encryption_for_your_webserver/README.html">
+        <li class="chapter " data-level="3" data-path="setting_up_ssl_and_tls_encryption_for_your_webserver/README.html">
             
                 
                     <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html">
@@ -324,9 +324,30 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_68">
+                    <section class="normal" id="section-gitbook_67">
                     
-                        <h1 id="setting-up-ssl-and-tls-encryption-for-your-webserver">Setting up SSL and TLS encryption for your webserver</h1>
+                        <h1 id="what-now">What now?</h1>
+<p>So now you have created your key pair. Great! GPG has exited and you have both a publickey and privatekey stored somewhere on your computer. Great! Now you can begin decryping and encrypting messages.</p>
+<h3 id="the-key-chain">The Key Chain</h3>
+<p>So before you can encrypt a message to someone you need their <em>publickey</em>. When you encrypt a message using their publickey, they can use their privatekey to decrypt it. Same when they try to contact you. They encrypt it with your publickey and you decrypt it with your privatekey.</p>
+<p>That&#39;s why you can put your publickey online for anyone to use but you must keep your privatekey safe.</p>
+<p>To be continued..</p>
+<h3 id="now-onto-the-encryption-process">Now onto the encryption process</h3>
+<p>Once you have the desired user in your keychain encrypting data that you wish to send them is fairly simple.</p>
+<p>First, in your command line environment navigate to the item which you wish to encrypt. In this case lets say that I have a text file named <code>msg.txt</code> and I want to send it to <code>bob@gmail.com</code> (Lets also assume that I have already added Bob&#39;s publickey to my keychain). In the end we want to have an encrypted file by the name of <code>encryptedmsg.gpg</code>.</p>
+<p><code>gpg --output encryptedmsg.gpg --encrypt --recipient bob@gmail.com msg.txt</code></p>
+<h6 id="lets-examine-this-command">Let&#39;s examine this command</h6>
+<p><code>gpg</code> - This is fairly simple. This is the name of the program we are executing.</p>
+<p><code>--output encryptedmsg.gpg</code> - This flag sets the name of the output file (our encrypted file).</p>
+<p><code>--encrypt</code> - This tells GPG that we are encrypting.</p>
+<p><code>--recipient bob@gmail.com</code> - This is the user whos&#39; publickey we are using to encrypt the message.</p>
+<p><code>msg.txt</code> - This is the file that we are encrypting.</p>
+<p>So in general the calling of gpg works like this:</p>
+<pre><code class="lang-bash">gpg [flags] [filename_to_encrypt]
+</code></pre>
+<p>Pretty simple right? It&#39;s a lot to remember but I&#39;ll write up a little cheat sheet that will make using gpg cake.</p>
+<h2 id="references">References</h2>
+<p><a href="https://www.gnupg.org/gph/en/manual/x110.html" target="_blank">https://www.gnupg.org/gph/en/manual/x110.html</a></p>
 
                     
                     </section>
@@ -337,10 +358,10 @@
         </div>
 
         
-        <a href="../key_based_encryption_applications/what_now.html" class="navigation navigation-prev " aria-label="Previous page: What now?"><i class="fa fa-angle-left"></i></a>
+        <a href="../key_based_encryption_applications/creating_a_key_pair.html" class="navigation navigation-prev " aria-label="Previous page: Creating a key pair"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/nginx.html" class="navigation navigation-next " aria-label="Next page: Nginx"><i class="fa fa-angle-right"></i></a>
+        <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html" class="navigation navigation-next " aria-label="Next page: Setting up SSL and TLS encryption for your webserver"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
