@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Nginx | Encryptology</title>
+        <title>Cheat Sheet | Encryptology</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../encrypted_instant_messaging/README.html" />
+    <link rel="next" href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html" />
     
     
-    <link rel="prev" href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html" />
+    <link rel="prev" href="../key_based_encryption_applications/verifying_authenticity.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="3.1" data-basepath=".." data-revision="1421807717526">
+    <div class="book" data-level="2.1.4" data-basepath=".." data-revision="1421807717526">
     
 
 <div class="book-summary">
@@ -164,7 +164,7 @@
         </li>
     
         
-        <li class="chapter " data-level="2.1.4" data-path="key_based_encryption_applications/cheat_sheet.html">
+        <li class="chapter active" data-level="2.1.4" data-path="key_based_encryption_applications/cheat_sheet.html">
             
                 
                     <a href="../key_based_encryption_applications/cheat_sheet.html">
@@ -207,7 +207,7 @@
                 
     
         
-        <li class="chapter active" data-level="3.1" data-path="setting_up_ssl_and_tls_encryption_for_your_webserver/nginx.html">
+        <li class="chapter " data-level="3.1" data-path="setting_up_ssl_and_tls_encryption_for_your_webserver/nginx.html">
             
                 
                     <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/nginx.html">
@@ -356,11 +356,41 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_11">
+                    <section class="normal" id="section-gitbook_5">
                     
-                        <h1 id="nginx">Nginx</h1>
-<p>TODO</p>
-
+                        <h1 id="cheat-sheet">Cheat Sheet</h1>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>GPG Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Store encrypted message in plaintext</td>
+<td><code>--armor</code></td>
+</tr>
+<tr>
+<td>Encrypt message</td>
+<td><code>gpg --encrypt --recipient  &lt;user-email&gt;</code></td>
+</tr>
+<tr>
+<td>Decrypt message</td>
+<td><code>gpg --decrypt</code></td>
+</tr>
+<tr>
+<td>Name output file</td>
+<td><code>--output &lt;filename&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>Encrypting a file to <code>bob@gmail.com</code> [TODO: Expand upon this scenario]</p>
+<pre><code>gpg --output encryptedmsg.gpg --encrypt --recipient bob@gmail.com msg.txt
+</code></pre><p>Decrypting a file <code>encryptedmsg.gpg</code> that was encrypted for you.</p>
+<pre><code>gpg --output undecryptedmsg --decrypt encryptedmsg.gpg
+</code></pre>
                     
                     </section>
                 
@@ -370,10 +400,10 @@
         </div>
 
         
-        <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html" class="navigation navigation-prev " aria-label="Previous page: Setting up SSL and TLS encryption for your webserver"><i class="fa fa-angle-left"></i></a>
+        <a href="../key_based_encryption_applications/verifying_authenticity.html" class="navigation navigation-prev " aria-label="Previous page: Verifying authenticity"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../encrypted_instant_messaging/README.html" class="navigation navigation-next " aria-label="Next page: Encrypted Instant Messaging"><i class="fa fa-angle-right"></i></a>
+        <a href="../setting_up_ssl_and_tls_encryption_for_your_webserver/README.html" class="navigation navigation-next " aria-label="Next page: Setting up SSL and TLS encryption for your webserver"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
