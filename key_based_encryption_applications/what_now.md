@@ -8,7 +8,61 @@ So before you can encrypt a message to someone you need their *publickey*. When 
 
 That's why you can put your publickey online for anyone to use but you must keep your privatekey safe.
 
-To be continued..
+##### Viewing your key chain
+
+To see what keys that you have access to for encrypting files you will want to list the publickeys in your key chain. You can do this with the `list-keys` command.
+
+```
+gpg --list-keys
+```
+
+##### Exporting a publickey (Giving this to others.)
+
+For someone to be able to encrypt messages to you, they must have access to your publickey. Since you may have multiple publickeys that you want to export, you must provide the email address associated with it. In this case lets say the email address is `example@gmail.com`.
+
+```
+gpg --armor --export example@gmail.org
+```
+This should output some text such as:
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v0.9.7 (GNU/Linux)
+Comment: For info see http://www.gnupg.org
+
+[...]
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
+If you want your key to be stored in a file you can use the `--output` flag.
+
+##### Importing a publickey
+
+Importing a publickey is fairly easy once you have the other users key (let's say it's stored in a file called `bob.gpg` and has email `bob@gmail.com` associated with it), simply run:
+
+```
+gpg --import bob.gpg
+```
+
+This should produce some output that looks similar to:
+
+```
+gpg: key 9E98BC16: public key imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+```
+
+Now if you list your keys again you should now see both your key and Bob's key.
+
+```
+gpg --list-keys
+...
+---------------------------------------
+pub  1024D/BB7576AC 1999-06-04 Example (This is you) <example@gmail.com>
+sub  1024g/78E9A8FA 1999-06-04
+
+pub  1024D/9E98BC16 1999-06-04 Bob (This is Bob) <bob@gmail.com>
+sub  1024g/5C8CBD41 1999-06-04
+```
 
 ### Now onto the encryption process
 
@@ -39,3 +93,5 @@ Pretty simple right? It's a lot to remember but I'll write up a little cheat she
 
 ## References
 [https://www.gnupg.org/gph/en/manual/x110.html](https://www.gnupg.org/gph/en/manual/x110.html)
+
+[https://www.gnupg.org/gph/en/manual/x56.html](https://www.gnupg.org/gph/en/manual/x56.html)
