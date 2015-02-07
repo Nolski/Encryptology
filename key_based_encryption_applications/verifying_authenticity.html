@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="2.1.3" data-basepath=".." data-revision="1422230603605">
+    <div class="book" data-level="2.1.3" data-basepath=".." data-revision="1423276253469">
     
 
 <div class="book-summary">
@@ -359,8 +359,12 @@
                     <section class="normal" id="section-gitbook_8">
                     
                         <h1 id="verifying-authenticity">Verifying authenticity</h1>
-<p>So here is a situation for you. You receive a message from your friend.</p>
-<p>TODO</p>
+<p>So here is a situation for you. You receive a publickey from your friend over the internet but you aren&#39;t quite sure of the publickey&#39;s authenticity. Have your friend contact you through a means which you are sure it is them and have them give you the key&#39;s fingerprint. Then use gpg to verify the key using the fingerprint.</p>
+<pre><code>gpg --fingerprint
+</code></pre><p>This should give you a message that looks like</p>
+<pre><code>pub  1024D/9E98BC16 1999-06-04 Example (Example) &lt;example@gmail.com&gt;
+    Fingerprint: 268F 448F CCD7 AF34 183E  52D8 9BDE 1A08 9E98 BC16
+</code></pre><p>TODO</p>
 
                     
                     </section>

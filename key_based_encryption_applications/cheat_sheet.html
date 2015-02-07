@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="2.1.4" data-basepath=".." data-revision="1422230603605">
+    <div class="book" data-level="2.1.4" data-basepath=".." data-revision="1423276253469">
     
 
 <div class="book-summary">
@@ -383,13 +383,25 @@
 <td>Name output file</td>
 <td><code>--output &lt;filename&gt;</code></td>
 </tr>
+<tr>
+<td>List Keys</td>
+<td><code>gpg --list-keys</code></td>
+</tr>
+<tr>
+<td>Export Key (plain text)</td>
+<td><code>gpg --armor --export &lt;user-email&gt;</code></td>
+</tr>
+<tr>
+<td>Import Key</td>
+<td><code>gpg --import &lt;user-email&gt;</code></td>
+</tr>
 </tbody>
 </table>
 <h3 id="examples">Examples</h3>
 <p>Encrypting a file to <code>bob@gmail.com</code> [TODO: Expand upon this scenario]</p>
-<pre><code>gpg --output encryptedmsg.gpg --encrypt --recipient bob@gmail.com msg.txt
+<pre><code>$ gpg --output encryptedmsg.gpg --encrypt --recipient bob@gmail.com msg.txt
 </code></pre><p>Decrypting a file <code>encryptedmsg.gpg</code> that was encrypted for you.</p>
-<pre><code>gpg --output undecryptedmsg --decrypt encryptedmsg.gpg
+<pre><code>$ gpg --output undecryptedmsg --decrypt encryptedmsg.gpg
 </code></pre>
                     
                     </section>
