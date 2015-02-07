@@ -64,7 +64,7 @@ pub  1024D/9E98BC16 1999-06-04 Bob (This is Bob) <bob@gmail.com>
 sub  1024g/5C8CBD41 1999-06-04
 ```
 
-### Now onto the encryption process
+### Encrypting
 
 Once you have the desired user in your keychain encrypting data that you wish to send them is fairly simple.
 
@@ -90,6 +90,13 @@ gpg [flags] [filename_to_encrypt]
 ```
 
 Pretty simple right? It's a lot to remember but I'll write up a little cheat sheet that will make using gpg cake.
+
+### Decrypting
+
+Decrypting is fairly simple. You just need to pass the `--decrypt` flag. So lets say you want to decrypt `encryptedmsg.gpg`, all you need to do is run:
+```
+gpg --decrypt encryptedmsg.gpg
+```
 
 ## References
 [https://www.gnupg.org/gph/en/manual/x110.html](https://www.gnupg.org/gph/en/manual/x110.html)
